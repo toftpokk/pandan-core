@@ -1,0 +1,16 @@
+{
+  "name": "pandan-core",
+  "version": "0.0.1",
+  "description": "Core for the pandan project",
+  "scripts": {},
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "svelte": "^4.0.5"
+  }
+}
