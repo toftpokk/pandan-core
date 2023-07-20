@@ -1,13 +1,25 @@
 <script lang="ts">
-    import NavLink from "./NavLink.svelte";
-    export let title;
-    export let webname;
-    export let links : Array<{name: string, href: string}> = [];
-    console.log(links)
+    export let webname : string;
 </script>
-<ul class="select-none dark:text-white text-main font-medium text-2xl my-6 flex justify-start w-full">
-    <li><span class="py-3 mx-1 px-3 text-xl text-accent">toftpokk<span class="dark:text-white text-mid">@{webname}</span></span></li>
-    {#each links as l}
-        <NavLink name={l.name} href={l.href} isActive={title==l.name}/>
-    {/each}
+<style>
+    .nav {
+        user-select: none;
+        color: var(--text-color);
+        display: flex;
+        justify-content: flex-start;
+        margin: 1.5rem auto;
+        flex-direction: row;
+    }
+    .logo {
+        padding: 0.75rem;
+        margin: auto 0.25rem;
+        color: var(--color-accent);
+    }
+    .name {
+        color: var(--text-color);
+    }
+</style>
+<ul class="nav">
+    <li><span class="logo">toftpokk<span class="name">@{webname}</span></span></li>
+    <slot/>
 </ul>
