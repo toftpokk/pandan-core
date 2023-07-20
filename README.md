@@ -22,3 +22,13 @@ Then refresh package-lock
 ## Install as npm package
 
 Unavailable
+
+## Development
+
+While in development, run vite dev server
+
+    npm run dev
+
+When using in other projects, build to /dist
+
+    npm run build
